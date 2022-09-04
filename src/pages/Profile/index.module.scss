@@ -1,0 +1,79 @@
+.root {
+  height: 100%;
+  :global{
+    
+    .adm-image {
+      border: 5px solid #7674a2;
+    }
+
+    .user-profile {
+      background: linear-gradient(318deg,#b2b5db,#565482 70%,#494675);
+      border-bottom-left-radius: 250px 50px;
+      border-bottom-right-radius: 250px 50px;
+      height: 250px;
+      color: #fff;
+      padding: 15px;
+    }
+
+    .info {
+      display: flex;
+      padding: 40px 0;
+    }
+
+    .info-name, .info-edit {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    }
+
+    .info-name {
+      flex: 1;
+    }
+
+    .info-name > h3 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    .info-edit > a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .user-social-info p {
+      text-align: center;
+      font-size: 16px;
+      line-height: 25px;
+      height: 25px;
+    }
+
+    .user-link, .more-link {
+      margin-top: 20px;
+      padding: 20px 0;
+      background-color: #fff;
+      border-radius: 15px;
+      color: #000;
+    }
+
+    .user-link, .more-link .adm-grid-item {
+      text-align: center;
+    }
+
+    .more-link {
+      padding-top: 10px;
+    }
+
+    .more-link .title {
+      padding: 5px 20px;
+    }
+
+    .user-link p,.more-link p {
+      margin-top: 5px;
+    }
+
+    .tt-icon {
+      font-size: 23px;
+    }
+
+  }
+}

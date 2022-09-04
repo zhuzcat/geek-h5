@@ -1,0 +1,37 @@
+.root {
+  :global {
+
+    .adm-list-body {
+      border: none;
+    }
+
+    .adm-form-footer {
+      padding: 0;
+    }
+
+    .login-form {
+      padding: 0 33px;
+    }
+
+    .title {
+      font-weight: 500;
+      margin: 54px 0 30px 0;
+    }
+
+    .adm-input-element {
+      font-size: 14px;
+    }
+
+    .code-extra {
+      font-size: 12px;
+    }
+
+    .login-submit {
+      margin-top: 20px;
+      border: none;
+      font-size: 16px;
+      height: 45px;
+      background: linear-gradient(315deg, #fe4f4f, #fc6627);
+    }
+  }
+}

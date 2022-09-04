@@ -1,0 +1,37 @@
+.root {
+  height: 100%;
+  :global{
+
+    .adm-nav-bar {
+      background-color: #fff;
+      height: 50px;
+    }
+
+    .profile-list {
+
+      .adm-list-item-content {
+        height: 45px;
+        padding: 0 10px;
+
+        .adm-list-item-content-prefix {
+          font-size: 14px;
+        }
+        
+      }
+    }
+
+    .logout {
+      position: absolute;
+      left: 0;
+      bottom: 50px;
+      width: 100%;
+      text-align: center;
+
+      span {
+        color: var(--adm-color-primary);
+        font-size: 14px;
+      }
+    }
+
+  } 
+}

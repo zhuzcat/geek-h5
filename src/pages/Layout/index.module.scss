@@ -1,0 +1,21 @@
+@import '@scss/hairline.scss';
+
+.root {
+  height: 100%;
+
+  :global{
+    .tab-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #f7f8fa;
+      height: 46px;
+      @include hairline(top, #f0f0f0);
+    }
+
+    .icon {
+      color: #fc6627;
+    }
+  }
+}
