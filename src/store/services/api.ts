@@ -6,7 +6,7 @@ const api = createApi({
 
   baseQuery: fetchQueryWithReauth,
 
-  tagTypes: ["Profile"],
+  tagTypes: ["Profile", "Channel", "Article"],
 
   endpoints: () => ({}),
 

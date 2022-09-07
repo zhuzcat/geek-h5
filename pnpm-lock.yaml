@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@reduxjs/toolkit': ^1.8.5
+  '@types/lodash': ^4.14.184
   '@types/node': ^18.7.13
   '@types/react': ^18.0.17
   '@types/react-dom': ^18.0.6
@@ -11,6 +12,7 @@ specifiers:
   classnames: ^2.3.1
   dayjs: ^1.11.5
   history: ^5.3.0
+  lodash: ^4.17.21
   postcss-px-to-viewport: ^1.1.1
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -27,6 +29,7 @@ dependencies:
   classnames: 2.3.1
   dayjs: 1.11.5
   history: 5.3.0
+  lodash: 4.17.21
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-redux: 8.0.2_76am3hp3mjvgy3cckgdecixdi4
@@ -34,6 +37,7 @@ dependencies:
   sass: 1.54.5
 
 devDependencies:
+  '@types/lodash': 4.14.184
   '@types/node': 18.7.13
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
@@ -458,6 +462,10 @@ packages:
   /@types/js-cookie/2.2.7:
     resolution: {integrity: sha512-aLkWa0C0vO5b4Sr798E26QgOkss68Un0bLjs7u9qxzPT5CG+8DuNTffWES58YzJs3hrVAOs1wonycqEBqNJubA==}
     dev: false
+
+  /@types/lodash/4.14.184:
+    resolution: {integrity: sha512-RoZphVtHbxPZizt4IcILciSWiC6dcn+eZ8oX9IWEYfDMcocdd42f7NPI6fQj+6zI8y4E0L7gu2pcZKLGTRaV9Q==}
+    dev: true
 
   /@types/node/18.7.13:
     resolution: {integrity: sha512-46yIhxSe5xEaJZXWdIBP7GU4HDTG8/eo0qd9atdiL+lFpA03y8KS+lkTN834TWJj5767GbWv4n/P6efyTFt1Dw==}

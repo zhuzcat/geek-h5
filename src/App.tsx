@@ -7,6 +7,7 @@ import Question from "./pages/Question";
 import Video from "./pages/Video";
 import Profile from "./pages/Profile";
 import ProfileEdit from "./pages/Profile/Edit";
+import NeedAuth from "./components/NeedAuth";
 
 function App() {
   return (
@@ -17,9 +18,19 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/home/qs" element={<Question />} />
           <Route path="/home/video" element={<Video />} />
-          <Route path="/home/profile" element={<Profile />} />
+          <Route
+            path="/home/profile"
+            element={<NeedAuth children={<Profile />} />}
+          />
         </Route>
-        <Route path="profile/edit" element={<ProfileEdit />} />
+        <Route
+          path="profile/edit"
+          element={
+            <NeedAuth>
+              <ProfileEdit />
+            </NeedAuth>
+          }
+        />
         <Route path="login" element={<Login />} />
       </Routes>
     </div>

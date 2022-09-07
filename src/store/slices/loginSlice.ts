@@ -2,6 +2,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Token } from "@/types/data";
 import loginApi from "../services/loginApi";
 import { clearToken, getToken, setToken } from "@/utils/token";
+import { AppDispatch } from "..";
+import { api } from "../services/api";
 
 const loginSlice = createSlice({
   name: "loginState",
@@ -45,5 +47,10 @@ const loginSlice = createSlice({
 });
 
 export const { logout, login } = loginSlice.actions;
+
+export const logoutAction = () => (dispatch: AppDispatch) => {
+  dispatch(logout());
+  dispatch(api.util.resetApiState());
+};
 
 export default loginSlice.reducer;

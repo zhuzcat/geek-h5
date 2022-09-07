@@ -8,8 +8,8 @@ import {
 import { Toast } from "antd-mobile";
 import loginApi from "@/store/services/loginApi";
 import { customHistory } from "./history";
-import { clearToken, getToken, setToken } from "./token";
-import { login, logout } from "@/store/slices/loginSlice";
+import { clearToken, getToken } from "./token";
+import { login, logoutAction } from "@/store/slices/loginSlice";
 
 // 类型断言将error缩小到FetchBaseQueryError
 export function isFetchBaseQueryError(
@@ -40,7 +40,7 @@ const fetchQuery = fetchBaseQuery({
       login: { token },
     } = getState() as RootState;
 
-    if (endpoint !== "login") {
+    if (endpoint !== "login" && token) {
       header.set("Authorization", `Bearer ${token}`);
     }
 
@@ -94,9 +94,9 @@ export const fetchQueryWithReauth: BaseQueryFn<
           // 清除缓存
           clearToken();
           // 清除内存
-          api.dispatch(logout());
+          api.dispatch(logoutAction());
           // 路由跳转到 登录 页 将当前的pathname作为state参数传给登录页
-          customHistory.push("/login", {
+          customHistory.replace("/login", {
             from: customHistory.location.pathname,
           });
         },

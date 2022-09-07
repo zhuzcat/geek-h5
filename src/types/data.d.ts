@@ -31,6 +31,37 @@ export type UserProfile = {
   intro: string;
 };
 
+// 频道信息
+export type Channel = {
+  id: number;
+  name: string;
+};
+
+// 频道列表
+export type ChannelList = {
+  channels: Channel[];
+};
+
+// 文章
+export type Article = {
+  art_id: string;
+  title: string;
+  aut_id: string;
+  aut_name: string;
+  comm_count: number;
+  pubdate: string;
+  cover: {
+    type: 0 | 1 | 3;
+    images: string[];
+  };
+};
+
+// 文章列表
+export type ArticleList = {
+  pre_timestamp: string;
+  results: Article[];
+};
+
 export type LoginResponse = ApiResponse<Token>;
 
 export type ProfileResponse = ApiResponse<User>;
@@ -44,3 +75,7 @@ export type UserPhotoResponse = ApiResponse<{
 export type RefreshTokenResponse = ApiResponse<{
   token: string;
 }>;
+
+export type UserChannelResponse = ApiResponse<ChannelList>;
+
+export type ArticleListResponse = ApiResponse<ArticleList>;

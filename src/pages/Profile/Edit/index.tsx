@@ -18,9 +18,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import dayjs from "dayjs";
 import { useAppDispatch } from "@/store";
-import { logout } from "@/store/slices/loginSlice";
-import { api } from "@/store/services/api";
 import style from "./index.module.scss";
+import { logoutAction } from "@/store/slices/loginSlice";
 
 type InputPopup = {
   type: "" | "name" | "intro";
@@ -181,11 +180,9 @@ const ProfileEdit = () => {
             text: "确认",
             onClick: () => {
               // 退出登录
-              dispatch(logout());
+              dispatch(logoutAction());
               // 路由跳转到/login
-              navigate("/login");
-              // 清除所有的api缓存
-              dispatch(api.util.resetApiState());
+              navigate("/login", { replace: true });
             },
           },
         ],

@@ -1,12 +1,12 @@
 import { api } from "./api";
 import { baseUrl } from "@/utils/http";
-import { LoginResponse, RefreshTokenResponse } from "@/types/data";
+import { RefreshTokenResponse } from "@/types/data";
 import { RootState } from "@/types/store";
 
 const loginApi = api.injectEndpoints({
   endpoints: (build) => ({
     // 登录 端点
-    login: build.mutation<LoginResponse, object>({
+    login: build.mutation({
       query(body) {
         return {
           url: "authorizations",
@@ -14,6 +14,8 @@ const loginApi = api.injectEndpoints({
           method: "post",
         };
       },
+      // 使频道失效
+      invalidatesTags: [{ type: "Channel" }],
     }),
     // 获取验证码 端点
     getCode: build.mutation({
